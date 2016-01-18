@@ -104,4 +104,3 @@ if firings2.size != 0:
   plt.title('Population 2 firings')
 
 plt.show()
-

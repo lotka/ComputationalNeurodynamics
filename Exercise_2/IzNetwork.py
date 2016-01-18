@@ -68,11 +68,11 @@ class IzNetwork:
         F = self.layer[i].factor[j]
 
         # Sum current from incoming spikes
-        k = len(firings)
-        while k > 0 and (firings[k-1, 0] > (t - self.Dmax)):
-          idx = delay[:, firings[k-1, 1]] == (t-firings[k-1, 0])
-          self.layer[i].I[idx] += F * S[idx, firings[k-1, 1]]
-          k = k-1
+        # k = len(firings)
+        # while k > 0 and (firings[k-1, 0] > (t - self.Dmax)):
+        #   idx = delay[:, firings[k-1, 1]] == (t-firings[k-1, 0])
+        #   self.layer[i].I[idx] += F * S[idx, firings[k-1, 1]]
+        #   k = k-1
 
     # Update v and u using the Izhikevich model and Euler method
     for k in xrange(int(1/dt)):
@@ -122,4 +122,3 @@ class IzLayer:
     self.S      = {}
     self.delay  = {}
     self.factor = {}
-

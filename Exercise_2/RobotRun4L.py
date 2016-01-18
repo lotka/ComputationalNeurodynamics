@@ -178,4 +178,3 @@ for t in xrange(len(T)):
   plt.figure(2)
   plt.scatter(x, y, marker='.')
   plt.draw()
-
